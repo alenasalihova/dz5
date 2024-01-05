@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/HomeworkPage.css';
+import '../../css/HomeworkPage.css';
 
 export class Posts extends Component {
     state = { 

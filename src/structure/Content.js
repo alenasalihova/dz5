@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import '../css/Content.css';
-export { Counter, MyEvents, Instruction, Users, Posts, Comments  } from '../components';
+import { Counter, MyEvents, Instruction, Users, Posts, Comments  } from './components';
 
 //import Counter from '../components/Counter';
 //import MyEvents from '../components/MyEvents';
