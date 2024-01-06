@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 
-import '../css/Content.css';
-import { Counter, MyEvents, Instruction, Users, Posts, Comments  } from './components';
+import PropTypes from 'prop-types';
+import cn from 'classnames';
 
-//import Counter from '../components/Counter';
-//import MyEvents from '../components/MyEvents';
-//import Instruction from '../components/Instruction'; 
-//import Users from '../components/User';
-//import Posts from '../components/Posts';
-//import Comments from '../components/Comments';
+import style from '../css/Content.module.css';
+import { Counter, MyEvents, Instruction, Users, Posts, Comments  } from './components';
 
 
 export class Content extends Component {
+  static propTypes = {
+    contentData: PropTypes.shape({
+      title: PropTypes.string,
+      describe: PropTypes.string,
+    }),
+  }; 
+  
   state = {
     showText1: false,
     showText2: false,
@@ -30,8 +33,8 @@ export class Content extends Component {
 
     return (
       <div>
-        <h1>{title}</h1>
-        <p className='p-content'>{describe}</p>
+        <h1 className={cn(style.h1)}>{title}</h1>
+        <p className={cn(style.p_content)}>{describe}</p>
         <hr></hr>
         <Counter />
         <hr></hr>
@@ -49,5 +52,3 @@ export class Content extends Component {
     );
   }
 }
-
-//export default Content;

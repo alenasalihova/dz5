@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/HomeworkPage.css'
+import style from '../../css/HomeworkPage.module.css'
 
 export class Instruction extends Component {
     state = {
@@ -18,7 +18,7 @@ export class Instruction extends Component {
     const { showImage1, showImage2, showImage3 } = this.state;
 
     return (
-        <div className='imgeButton'>
+        <div className={style.imgeButton}>
             <button onClick={() => this.handleToggleImage(1)}>Image 1</button>
             <button onClick={() => this.handleToggleImage(2)}>Image 2</button>
             <button onClick={() => this.handleToggleImage(3)}>Image 3</button>
@@ -29,5 +29,3 @@ export class Instruction extends Component {
     );
   }
 }
-
-//export default Instruction;

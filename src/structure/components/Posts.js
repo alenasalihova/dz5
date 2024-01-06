@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import '../../css/HomeworkPage.css';
+
+import style from '../../css/HomeworkPage.module.css';
+import PropTypes from 'prop-types';
 
 export class Posts extends Component {
     state = { 
@@ -123,7 +125,7 @@ export class Posts extends Component {
         );
     
         return (
-          <div className='users'>
+          <div className={style.users}>
             <h4>Posts</h4>
             <input
               type='text'
@@ -138,9 +140,12 @@ export class Posts extends Component {
               </div>
             ))}
           </div>
-        );
-      
+        );  
     }
 }
 
-//export default Posts;
+Posts.propTypes = {
+  userId: PropTypes.number,
+  id: PropTypes.number,
+  title: PropTypes.string, 
+}

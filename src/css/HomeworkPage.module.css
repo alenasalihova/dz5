@@ -1,9 +1,9 @@
-.homework-page {
+.homework_page {
     padding: 20px;
     margin: 20px;
     display: flex;
   }
-.homework-page-container {
+.homework_page_container {
     width: 70%;
     margin-left: 5px;
     display: flex;

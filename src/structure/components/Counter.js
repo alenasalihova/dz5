@@ -32,5 +32,3 @@ export class Counter extends Component {
     );
   }
 }
-
-//export default Counter;

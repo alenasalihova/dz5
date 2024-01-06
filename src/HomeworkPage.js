@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 
-//import Header from './structure/Header';
-//import Footer from './structure/Footer';
-//import Sidebar from './structure/Sidebar';
-//import Content from './structure/Content';
-
-import './css/HomeworkPage.css';
+import style from './css/HomeworkPage.module.css';
 import { Content, Footer, Header, Sidebar } from './structure';
 
 class HomeworkPage extends Component {
@@ -19,21 +14,21 @@ class HomeworkPage extends Component {
     };
 
     return (
-      <div className="homework-page">
-        <div className="sidebar">
+      <div className={style.homework_page}>
+        <div className={style.sidebar}>
           <Sidebar info={sidebarInfo} />
         </div>
 
-        <div className='homework-page-container'>
-          <div className="header">
+        <div className={style.homework_page_container}>
+          <div className={style.header}>
             <Header info={headerInfo} />
           </div>
           
-          <div className="content">
+          <div className={style.content}>
             <Content contentData={contentData} />
           </div>
 
-          <div className="footer">
+          <div className={style.footer}>
             <Footer info={footerInfo} />
           </div>
         </div>

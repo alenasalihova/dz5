@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import '../../css/HomeworkPage.css';
+
+import style from '../../css/HomeworkPage.module.css';
+import PropTypes from 'prop-types';
 
 export class Users extends Component {
     state = { 
@@ -31,7 +33,7 @@ export class Users extends Component {
         );
 
         return (
-            <div className='users'>
+            <div className={style.users}>
                 <h4>Users</h4>
                 <input
                     type="text"
@@ -51,4 +53,9 @@ export class Users extends Component {
     }
 }
 
-//export default Users;    
+Users.propTypes = {
+    id: PropTypes.number,
+    name: PropTypes.string,
+    username: PropTypes.string,
+    email: PropTypes.string,
+}
