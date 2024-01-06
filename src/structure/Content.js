@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import style from '../css/Content.module.css';
-import { Counter, MyEvents, Instruction, Users, Posts, Comments  } from './components';
+import { Counter, MyEvents, Instruction, Users, Posts, Comments  } from '../components';
 
 
 export class Content extends Component {
@@ -14,7 +14,7 @@ export class Content extends Component {
       describe: PropTypes.string,
     }),
   }; 
-  
+
   state = {
     showText1: false,
     showText2: false,

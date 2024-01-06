@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import style from '../../css/HomeworkPage.module.css';
+import style from '../css/HomeworkPage.module.css';
 import PropTypes from 'prop-types';
 
 export class Comments extends Component {
