@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import style from '../css/HomeworkPage.module.css';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
+
+import style from '../css/HomeworkPage.module.css';
 
 export class Users extends Component {
     state = { 
@@ -43,7 +45,7 @@ export class Users extends Component {
                 />
 
                 {filteredUsers.map((user, i) => (
-                    <div key={i}>
+                    <div key={v4()}>
                         {user.id} - {user.name} - {user.username} - {user.email}
                         <button onClick={() => this.deleteUser(i)}>Del</button>
                     </div> 
@@ -51,11 +53,11 @@ export class Users extends Component {
             </div>
         );
     }
-}
+};
 
 Users.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
     username: PropTypes.string,
     email: PropTypes.string,
-}
+};

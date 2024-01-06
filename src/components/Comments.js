@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import style from '../css/HomeworkPage.module.css';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
+
+import style from '../css/HomeworkPage.module.css';
 
 export class Comments extends Component {
     state = { 
@@ -85,7 +87,7 @@ export class Comments extends Component {
                 />
 
                 {filteredComments.map((comment, i) => (
-                    <div key={i}>
+                    <div key={v4()}>
                         {comment.postId} - {comment.id} - {comment.name} - {comment.email} - {comment.body} 
                         <button value={i} onClick={this.deleteComment}>Del</button>
                     </div>

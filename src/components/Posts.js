@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import style from '../css/HomeworkPage.module.css';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
+
+import style from '../css/HomeworkPage.module.css';
 
 export class Posts extends Component {
     state = { 
@@ -134,7 +136,7 @@ export class Posts extends Component {
               onChange={this.handleIdChange}
             />
             {filteredPosts.map((post) => (
-              <div key={post.id}>
+              <div key={v4(post.id)}>
                 {post.userId} - {post.id} - {post.title} - {post.body}{' '}
                 <button onClick={() => this.deletePost(post.id)}>Del</button>
               </div>
